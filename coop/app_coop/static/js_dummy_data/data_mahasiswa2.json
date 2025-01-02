@@ -1,0 +1,107 @@
+[
+  {
+    "fullName": "Ethan Thompson",
+    "NIM": "23502310104",
+    "issuedAt": "Selasa, 29 Oktober 2024",
+    "status": "Sedang Diproses",
+    "statusKurikulum": "COOP"
+  },
+  {
+    "fullName": "Isabella Garcia",
+    "NIM": "23502310106",
+    "issuedAt": "Rabu, 30 Oktober 2024",
+    "status": "Terkonfirmasi",
+    "statusKurikulum": "Reguler"
+  },
+  {
+    "fullName": "Olivia Martin",
+    "NIM": "23502310108",
+    "issuedAt": "Kamis, 31 Oktober 2024",
+    "status": "Sedang Diproses",
+    "statusKurikulum": "COOP"
+  },
+  {
+    "fullName": "Sophia Lee",
+    "NIM": "23502310110",
+    "issuedAt": "Jumat, 1 November 2024",
+    "status": "Terkonfirmasi",
+    "statusKurikulum": "Reguler"
+  },
+  {
+    "fullName": "James Darwin",
+    "NIM": "23502310112",
+    "issuedAt": "Sabtu, 2 November 2024",
+    "status": "Sedang Diproses",
+    "statusKurikulum": "COOP"
+  },
+  {
+    "fullName": "Emily Chen",
+    "NIM": "23502310114",
+    "issuedAt": "Minggu, 3 November 2024",
+    "status": "Terkonfirmasi",
+    "statusKurikulum": "Reguler"
+  },
+  {
+    "fullName": "Michael Brown",
+    "NIM": "23502310116",
+    "issuedAt": "Senin, 4 November 2024",
+    "status": "Sedang Diproses",
+    "statusKurikulum": "COOP"
+  },
+  {
+    "fullName": "William White",
+    "NIM": "23502310118",
+    "issuedAt": "Selasa, 5 November 2024",
+    "status": "Terkonfirmasi",
+    "statusKurikulum": "Reguler"
+  },
+  {
+    "fullName": "Ava Harris",
+    "NIM": "23502310120",
+    "issuedAt": "Rabu, 6 November 2024",
+    "status": "Sedang Diproses",
+    "statusKurikulum": "COOP"
+  },
+  {
+    "fullName": "Liam Patel",
+    "NIM": "23502310122",
+    "issuedAt": "Kamis, 7 November 2024",
+    "status": "Terkonfirmasi",
+    "statusKurikulum": "Reguler"
+  },
+  {
+    "fullName": "Noah Kim",
+    "NIM": "23502310124",
+    "issuedAt": "Jumat, 8 November 2024",
+    "status": "Sedang Diproses",
+    "statusKurikulum": "COOP"
+  },
+  {
+    "fullName": "Ethan Thompson",
+    "NIM": "23502310126",
+    "issuedAt": "Sabtu, 9 November 2024",
+    "status": "Terkonfirmasi",
+    "statusKurikulum": "Reguler"
+  },
+  {
+    "fullName": "Isabella Garcia",
+    "NIM": "23502310128",
+    "issuedAt": "Minggu, 10 November 2024",
+    "status": "Sedang Diproses",
+    "statusKurikulum": "COOP"
+  },
+  {
+    "fullName": "Olivia Martin",
+    "NIM": "23502310130",
+    "issuedAt": "Senin, 11 November 2024",
+    "status": "Terkonfirmasi",
+    "statusKurikulum": "Reguler"
+  },
+  {
+    "fullName": "Sophia Lee",
+    "NIM": "23502310132",
+    "issuedAt": "Selasa, 12 November 2024",
+    "status": "Sedang Diproses",
+    "statusKurikulum": "COOP"
+  }
+]

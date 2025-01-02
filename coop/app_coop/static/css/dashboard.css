@@ -1,0 +1,173 @@
+*{
+    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+}
+
+.navigation-bar-top nav{
+    background-color: white;
+}
+
+.logo-stem{
+    width: 10rem;
+}
+
+.profile{
+    height: 2rem;
+}
+
+@media (max-width: 1600px) {
+    .profile-name {
+        display: none;
+    }
+
+    .menu-dashboard{
+        display: none;
+    }
+
+    .navbar-toggler{
+        display: block !important;
+    }
+    
+}
+
+.navbar-toggler{
+    display: none;
+}
+
+
+.dashboard{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.kanan i{
+    font-size: 2.7rem;
+    color: #747474;
+}
+
+.dashboard-down2 i{
+    font-size: 2.7rem;
+    color: #747474;
+}
+
+.list-of-uploads2 i{
+    font-size: 1rem;
+    color: #747474;
+}
+
+hr.solid {
+    border-top: 3px solid #181818;
+}
+
+.card-body p{
+    font-size: 0.8rem;
+    color: #9D9D9D;
+}
+
+.nav-link.text-start.active{
+    background-color: #B21D1D;
+    color: white;
+}
+
+.nav-link.text-start{
+    color: #656565;
+}
+
+.mt-7{
+    margin-top: 32rem;
+}
+
+.keluar-akun button{
+    color: #B21D1D;
+}
+
+
+/* FOOTER */
+footer{
+    background-color: #181818;
+    width: 100%;
+}
+
+.footer-img{
+    width: 20rem;
+}
+
+.footer-desc{
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-img2{
+    height: 2rem;
+}
+
+.footer-desc2{
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-desc2 a{
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.custom-row{
+    display: flex;
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 1600px) {
+    .footer-kanan{
+        position: none;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-top: 2rem;
+    }
+}
+
+.mt-6{
+    margin-top: 6rem;
+}
+
+.mt-8{
+    margin-top: 29rem;
+}
+
+.mt-9{
+    margin-top: 9rem;
+}
+
+.btn-custom-red{
+    color: white;
+    background-color: #E20613;
+}
+
+a{
+    text-decoration: none;
+}
+
+.inplace-logo{
+    height: 2.8rem;
+}
+
+.form-check-input.todo{
+    height: 2rem;
+    width: 2rem;
+}
+
+.navigation-bar-top2 a{
+    color: #181818;
+}
+
+.flex-profile{
+    display: flex;
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "Sue Luden",
+    "issuedByNIM": "23502310025",
+    "issuedAt": "Senin, 30 September 2024",
+    "status": "Terkonfirmasi"
+  },
+  {
+    "id": 2,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "John Doe",
+    "issuedByNIM": "23502310027",
+    "issuedAt": "Selasa, 1 Oktober 2024",
+    "status": "Sedang Diproses"
+  },
+  {
+    "id": 3,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "Michael Brown",
+    "issuedByNIM": "23502310029",
+    "issuedAt": "Rabu, 2 Oktober 2024",
+    "status": "Terkonfirmasi"
+  },
+  {
+    "id": 4,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "William White",
+    "issuedByNIM": "23502310031",
+    "issuedAt": "Kamis, 3 Oktober 2024",
+    "status": "Sedang Diproses"
+  },
+  {
+    "id": 5,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "Ava Harris",
+    "issuedByNIM": "23502310033",
+    "issuedAt": "Jumat, 4 Oktober 2024",
+    "status": "Terkonfirmasi"
+  },
+  {
+    "id": 6,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "Liam Patel",
+    "issuedByNIM": "23502310035",
+    "issuedAt": "Sabtu, 5 Oktober 2024",
+    "status": "Sedang Diproses"
+  },
+  {
+    "id": 7,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "Noah Kim",
+    "issuedByNIM": "23502310037",
+    "issuedAt": "Minggu, 6 Oktober 2024",
+    "status": "Terkonfirmasi"
+  },
+  {
+    "id": 8,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "Ethan Thompson",
+    "issuedByNIM": "23502310039",
+    "issuedAt": "Senin, 7 Oktober 2024",
+    "status": "Sedang Diproses"
+  },
+  {
+    "id": 9,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "Isabella Garcia",
+    "issuedByNIM": "23502310041",
+    "issuedAt": "Selasa, 8 Oktober 2024",
+    "status": "Terkonfirmasi"
+  },
+  {
+    "id": 10,
+    "title": "Permintaan Surat Pengantar",
+    "description": "Siswa ini meminta surat pengantar untuk keperluan magangnya",
+    "issuedByName": "Olivia Martin",
+    "issuedByNIM": "23502310043",
+    "issuedAt": "Rabu, 9 Oktober 2024",
+    "status": "Sedang Diproses"
+  }
+
+]

@@ -1,0 +1,74 @@
+[
+    {
+      "description": "Siswa ini meminta mock interview untuk keperluan magangnya/ Mempersiapkan IISMA interview, Interview untuk latihan mendapatkan beasiswa",
+      "issuedByName": "Sue Luden",
+      "issuedByNIM": "23502310025",
+      "issuedAt": "Senin, 30 September 2024",
+      "status": "Terkonfirmasi",
+      "intvDateRequest": "Rabu, 2 Oktober 2024",
+      "fromTime": "13.00",
+      "duration": "1 hours",
+      "interviewerRequest": "Mariyanti Nurfatwi",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "description": "Siswa ini meminta mock interview untuk keperluan magangnya/ Mempersiapkan IISMA interview, Interview untuk latihan mendapatkan beasiswa",
+      "issuedByName": "John Doe",
+      "issuedByNIM": "23502310027",
+      "issuedAt": "Selasa, 1 Oktober 2024",
+      "status": "Sedang Diproses",
+      "intvDateRequest": "Kamis, 3 Oktober 2024",
+      "fromTime": "14.00",
+      "duration": "1 hours",
+      "interviewerRequest": "Rahmat Hidayat",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "description": "Siswa ini meminta mock interview untuk keperluan magangnya/ Mempersiapkan IISMA interview, Interview untuk latihan mendapatkan beasiswa",
+      "issuedByName": "Emily Chen",
+      "issuedByNIM": "23502310029",
+      "issuedAt": "Rabu, 2 Oktober 2024",
+      "status": "Terkonfirmasi",
+      "intvDateRequest": "Jumat, 4 Oktober 2024",
+      "fromTime": "15.00",
+      "duration": "1 hours",
+      "interviewerRequest": "Siti Nurhaliza",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "description": "Siswa ini meminta mock interview untuk keperluan magangnya/ Mempersiapkan IISMA interview, Interview untuk latihan mendapatkan beasiswa",
+      "issuedByName": "Michael Brown",
+      "issuedByNIM": "23502310031",
+      "issuedAt": "Kamis, 3 Oktober 2024",
+      "status": "Sedang Diproses",
+      "intvDateRequest": "Sabtu, 5 Oktober 2024",
+      "fromTime": "16.00",
+      "duration": "1 hours",
+      "interviewerRequest": "Budi Santoso",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "description": "Siswa ini meminta mock interview untuk keperluan magangnya/ Mempersiapkan IISMA interview, Interview untuk latihan mendapatkan beasiswa",
+      "issuedByName": "Ava Harris",
+      "issuedByNIM": "23502310033",
+      "issuedAt": "Jumat, 4 Oktober 2024",
+      "status": "Terkonfirmasi",
+      "intvDateRequest": "Minggu, 6 Oktober 2024",
+      "fromTime": "17.00",
+      "duration": "1 hours",
+      "interviewerRequest": "Lestari Widyastuti",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "description": "Siswa ini meminta mock interview untuk keperluan magangnya/ Mempersiapkan IISMA interview, Interview untuk latihan mendapatkan beasiswa",
+      "issuedByName": "Liam Patel",
+      "issuedByNIM": "23502310035",
+      "issuedAt": "Sabtu, 5 Oktober 2024",
+      "status": "Sedang Diproses",
+      "intvDateRequest": "Senin, 7 Oktober 2024",
+      "fromTime": "18.00",
+      "duration": "1 hours",
+      "interviewerRequest": "Rizky Ramadhan",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    }
+]

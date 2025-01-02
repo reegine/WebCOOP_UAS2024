@@ -1,0 +1,499 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COOP - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <script src="https://kit.fontawesome.com/3574c5c929.js" crossorigin="anonymous"></script> 
+</head>
+  <body>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-info">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    <section class="navigation-bar-top2">
+        <nav class="navbar bg-body-tertiary fixed-top shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="container-fluid">
+               <a class="navbar-brand" href="{% url 'dashboard_student' %}"><img class="logo-stem" src="{% static 'assets/logo/logo_stem.png' %}" alt=""></a>
+               <a href="{% url 'dashboard_student' %}" class="d-flex align-items-center">
+                    <img class="rounded-circle profile me-3" alt="avatar1" src="{% static 'assets/people/profile_pic.png' %}" />
+                    <p class="mb-0">John Doe</p>
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarTogglerDemo02" aria-labelledby="navbarTogglerDemo02Label">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="navbarTogglerDemo02Label">Menu</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1">
+                    <li class="nav-item">
+                      <button class="nav-link text-start p-4 rounded active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa-solid fa-house me-3"></i>Dashboard</button>
+                    </li>
+                    <li class="nav-item">
+                      <button class="nav-link text-start p-4 rounded" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fa-solid fa-bell me-3"></i>Notifikasi</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-start p-4 rounded" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fa-solid fa-user me-3"></i>Profil</button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'home' %}" type="button" class="btn btn-light"> <i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Keluar Akun</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </section>
+
+    <section class="dashboard mt-9">
+        <div>
+            <div class="row justify-content-center">
+              <div class="col-sm-2 menu-dashboard">
+
+                <div class="d-flex justify-content-center w-100 bg-white p-4 rounded"> 
+                    <div class="nav flex-column nav-pills text-start me-3 justify-content-between" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <div class="sub-menu-dashboard">
+                            <button class="nav-link text-start mb-2 active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa-solid fa-house me-3"></i>Dashboard</button>
+                            <button class="nav-link text-start mb-2" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fa-solid fa-bell me-3"></i>Notifikasi</button>
+                            <button class="nav-link text-start mb-2" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fa-solid fa-user me-3"></i>Profil</button>
+                        </div>
+                        <div class="keluar-akun mt-7">
+                            <hr class="solid">
+                            <a href="{% url 'home' %}" type="button" class="btn btn-light"> <i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Keluar Akun</a>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+              <div class="col-sm-10">
+                <div class="tab-content " id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                        <section class="dashoboard-up">
+                            <div class="row justify-content-evenly">
+                                <div class="col-lg-6">
+                                    <div class="isikiri">
+                                        <h3>Pendaftaran Program COOP</h3>
+                                        <p>30 September 2024 - 31 Desember 2024</p>
+                                        <div class="container bg-white p-4 rounded">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <div class="row text-center">
+                                                            <div class="col-3">
+                                                                <h3 id="days" class="display-4">29</h3>
+                                                                <p>Hari</p>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <h3 id="hours" class="display-4">06</h3>
+                                                                <p>Jam</p>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <h3 id="minutes" class="display-4">58</h3>
+                                                                <p>Menit</p>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <h3 id="seconds" class="display-4">24</h3>
+                                                                <p>Detik</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="container bg-white p-4 rounded my-4">
+                                            <h5>Cek Kelengkapan Data</h5>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Surat Pendaftaran Program COOP
+                                                </label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Surat Konfirmasi Perusahaan
+                                                </label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Laporan Hasil Evaluasi Akhir Magang
+                                                </label>
+                                              </div>
+                                        </div>
+                                </div>
+                                
+                                </div>
+                                <div class="col-lg-6 kanan">
+                                    <h5 class="mb-3">Aktivitas Portal</h5>
+                                    <div class="container text-center">
+                                        <div class="row row-cols-3">
+                                          <div class="col my-3">
+                                            <a href="{% url 'surat_pengantar_input' %}" class="card p-5 w-100 align-items-center">
+                                                <i class="fa-solid fa-file-signature"></i>
+                                            </a>
+                                            <div class="card-body mt-2">
+                                                <p class="card-text">Surat Pengantar</p>
+                                            </div>
+                                          </div>
+                                          <div class="col  my-3">
+                                            <a href="{% url 'permintaan_mock_intv' %}" class="card p-5 w-100 align-items-center">
+                                                <i class="fa-solid fa-user-group"></i>
+                                            </a>
+                                            <div class="card-body mt-2">
+                                                <p class="card-text">Mock Interview</p>
+                                            </div>
+                                          </div>
+                                          <div class="col  my-3">
+                                            <a href="{% url 'portal_inplace' %}" class="card p-5 w-100 align-items-center">
+                                              <i class="fa-solid fa-business-time"></i>
+                                            </a>
+                                            <div class="card-body mt-2">
+                                                <p class="card-text">Open Career</p>
+                                            </div>
+                                          </div>
+                                          <div class="col  my-3">
+                                            <a href="{% url 'pengunggahan_cv' %}" class="card p-5 w-100 align-items-center">
+                                                <i class="fa-solid fa-file-pdf"></i>
+                                            </a>
+                                            <div class="card-body mt-2">
+                                                <p class="card-text">Pengunggahan CV</p>
+                                            </div>
+                                          </div>
+                                          <div class="col my-3">
+                                            <a href="{% url 'konfirmasi_coop' %}" class="card p-5 w-100 align-items-center">
+                                                <i class="fa-solid fa-circle-exclamation"></i>
+                                            </a>
+                                            <div class="card-body mt-2">
+                                                <p class="card-text">Konfirmasi COOP</p>
+                                            </div>
+                                          </div>
+                                          <div class="col  my-3">
+                                            <a href="{% url 'laporan_hasil_magang' %}" class="card p-5 w-100 align-items-center">
+                                                <i class="fa-solid fa-file-circle-plus"></i>
+                                            </a>
+                                            <div class="card-body mt-2">
+                                                <p class="card-text">Laporan Hasil Magang</p>
+                                            </div>
+                                          </div>
+                                          
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="dashboard-down mt-5">
+                            <h4>BERKAS YANG TELAH DIUNGGAH</h4>
+                            <hr class="solid">
+                            <div class="container text-start">
+                                <div class="row align-items-center">
+                                  <div class="col">
+                                    Keterangan
+                                  </div>
+                                  <div class="col">
+                                    Status
+                                  </div>
+                                  <div class="col">
+                                    Waktu
+                                  </div>
+                                </div>
+                              </div>
+                            <div class="list-of-uploads mt-4">
+                                <div class="card my-2">
+                                    <div class="card-body">
+                                        <div class="container text-start">
+                                            <div class="row align-items-center">
+                                              <div class="col">
+                                                Surat Pendaftaran Program COOP
+                                              </div>
+                                              <div class="col">
+                                                <span class="badge bg-success p-2">Disetujui</span>
+                                              </div>
+                                              <div class="col">
+                                                <div class="row align-items-center">
+                                                    <p class="col-10">28 September 2024 | 11:07 WIB</p>
+                                                    <i class="col-1 fa-solid fa-angle-right"></i>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="card my-2">
+                                    <div class="card-body">
+                                        <div class="container text-start">
+                                            <div class="row align-items-center">
+                                              <div class="col">
+                                                Permintaan Mock Interview
+                                              </div>
+                                              <div class="col">
+                                                <span class="badge bg-warning p-2">Sedang Ditinjau</span>
+                                              </div>
+                                              <div class="col">
+                                                <div class="row align-items-center">
+                                                    <p class="col-10">28 September 2024 | 11:07 WIB</p>
+                                                    <i class="col-1 fa-solid fa-angle-right"></i>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="card my-2">
+                                    <div class="card-body">
+                                        <div class="container text-start">
+                                            <div class="row align-items-center">
+                                              <div class="col">
+                                                Pengunggahan CV
+                                              </div>
+                                              <div class="col">
+                                                <span class="badge bg-warning p-2">Sedang Ditinjau</span>
+                                              </div>
+                                              <div class="col">
+                                                <div class="row align-items-center">
+                                                    <p class="col-10">28 September 2024 | 11:07 WIB</p>
+                                                    <i class="col-1 fa-solid fa-angle-right"></i>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                        <section class="comments">
+                            <h3>Notifikasi</h3>
+                            <div id="comments-data" class="my-3">
+
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+
+                        <form action="{% url 'dashboard_student' %}" class="w-100 mt-5">
+                            <section class="container identitas-mahasiswa mt-5">
+                                <h4 class="flex-profile justify-content-between">
+                                  <div>
+                                    IDENTITAS MAHASISWA <span class="badge text-bg-secondary mx-2">Program Reguler</span>
+                                  </div>
+                                  <a href="{% url 'pengunduran_diri_mahasiswa' %}" type="button" class="btn btn-outline-danger">Pengunduran Diri</a>
+                                </h4>
+                                <hr class="solid">
+                                <div class="container text-start">
+                                        <div class="row row-cols-md-2">
+                                            <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputFullName1" class="form-label">Nama Lengkap</label>
+                                                    <input value="John Doe" placeholder="contoh: John Doe"  type="text" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="exampleInputFullName1">
+                                                  </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Email Pribadi</label>
+                                                    <input value="johndoe123@gmail.com"  placeholder="contoh: johndoe@email.com"  type="email" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="exampleInputEmail1">
+                                                  </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPhoneNumber1" class="form-label">Nomor Telepon</label>
+                                                    <input value="+62 854 7356 2554" placeholder="contoh: +62 122345XXX" type="tel" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="exampleInputPhoneNumber1">
+                                                  </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputGender1" class="form-label">Jenis Kelamin</label>
+                                                    <select class="form-select shadow-sm p-3 mb-5 bg-body-tertiary rounded" aria-label="Default select example">
+                                                        <option selected value="Laki-laki">Laki-laki</option>
+                                                        <option value="Perempuan">Perempuan</option>
+                                                        <option value="Lainnya">Lainnya</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPassword1" class="form-label">Kata Sandi Akun</label>
+                                                    <input placeholder="contoh: abcdeFg1&!" type="password" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="exampleInputPassword1">
+                                                  </div>
+                                            </div> -->
+                                          </div>
+                            </section>
+                    
+                            <section class="container keterangan-mahasiswa mt-5">
+                                <h4>KETERANGAN MAHASISWA</h4>
+                                <hr class="solid">
+                                <div class="container text-start">
+                                        <div class="row row-cols-md-2">
+                                            <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputNIM1" class="form-label">NIM</label>
+                                                    <input value="23502310025" placeholder="contoh: 235023100XX"  type="text" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="exampleInputNIM1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputMajor1" class="form-label">Program Studi</label>
+                                                    <select class="form-select shadow-sm p-3 mb-5 bg-body-tertiary rounded" aria-label="Default select example">
+                                                        <option value="S1 Business Mathematics">S1 Business Mathematics</option>
+                                                        <option value="S1 Food Business Technology">S1 Food Business Technology</option>
+                                                        <option value="S1 Renewable Energy Engineering">S1 Renewable Energy Engineering</option>
+                                                        <option value="S1 Computer System Engineering">S1 Computer System Engineering</option>
+                                                        <option selected value="S1 Software Engineering">S1 Software Engineering</option>
+                                                        <option value="S1 Product Design Engineering">S1 Product Design Engineering</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputAngkatan1" class="form-label">Angkatan</label>
+                                                    <select class="form-select shadow-sm p-3 mb-5 bg-body-tertiary rounded" aria-label="Default select example">
+                                                        <option selected>pilih angkatan</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2018">2018</option>
+                                                        <option value="2019">2019</option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2021">2021</option>
+                                                        <option value="2022">2022</option>
+                                                        <option selected value="2023">2023</option>
+                                                        <option value="2024">2024</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputClass1" class="form-label">Kelas</label>
+                                                    <select class="form-select shadow-sm p-3 mb-3 bg-body-tertiary rounded" aria-label="Default select example">
+                                                        <option selected>pilih kelas</option>
+                                                        <option selected value="A">A</option>
+                                                        <option value="B">B</option>
+                                                        <option value="C">C</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputCampusEmail1" class="form-label">Email Kampus</label>
+                                                    <input value="23502310025@student.prasetiyamulya.ac.id"  placeholder="contoh: 235023100XX@student.prasetiyamulya.ac.id"  type="email" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="exampleInputCampusEmail1">
+                                                  </div>
+                                            </div>
+                                        </div>
+                                          </div>
+                            </section>
+                    
+                            <section class="container informasi-pelengkap mt-5">
+                                <h4>INFORMASI PELENGKAP</h4>
+                                <hr class="solid">
+                                <div class="container text-start">
+                    
+                                <div class="col-md">
+                                    <div class="mb-3">
+                                        <label for="exampleInputPernyataan1" class="form-label">Penyataan</label>
+                                        <label for="exampleInputPernyataan1" class="form-label custom-font-red my-2">"Dengan ini saya menyatakan bersedia untuk mengikuti Program Co-operative Education (Co-op) dan mengikuti perkuliahan sesuai ketentuan Kurikulum Co-op"</label>
+                                        <input value="Dengan ini saya menyatakan bersedia untuk mengikuti Program Co-operative Education (Co-op) dan mengikuti perkuliahan sesuai ketentuan Kurikulum Co-op"   placeholder="contoh: John Doe" type="text" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="exampleInputPernyataan1">
+                                      </div>
+                                </div>
+                                <div class="row row-cols-md-2 my-3">
+                                    <div class="col-md">
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label">Berkas bukti konsultasi dan persetujuan mentor</label>
+                                            <input placeholder="Bukti_konsultasi_John_Doe.pdf" class="form-control shadow-sm p-3 bg-body-tertiary rounded" type="file" id="formFile">
+                                            <div class="form-text mt-2 " id="basic-addon4">*berkas yang diterima pada masing-masing bagian adalah file ukuran maksimal 1GB (.jpg, .png. mp4, .jpeg), contoh file Screenshot WA, Email ,etc</div>
+                                          </div>
+                                          
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label">Berkas SPTJM Mahasiwa Program Co-op</label>
+                                            <input placeholder="SPTJM_John_Doe.pdf" class="form-control shadow-sm p-3 bg-body-tertiary rounded" type="file" id="formFile">
+                                            <div class="form-text mt-2" id="basic-addon4">*Template SPTJM: <a href="https://bit.ly/sptjmcoop">https://bit.ly/sptjmcoop</a></div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="container submit mt-6">
+                    
+                                  <button type="button" class="btn btn-outline-danger w-100 btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    Perbaharui Data
+                                  </button>
+                                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Pendaftaran Program COOP</h1>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          Apakah kamu yakin data yang dimasukkan sudah benar?
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+                                          <button type="submit button" class="btn btn-custom-red">Kirimkan</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </section>
+                    
+                        </form>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <footer class="mt-6 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                  <img  class="footer-img" src="{% static 'assets/logo/logo_stem2.png'%}" alt="">
+                  <h2 class="footer-desc mt-5">
+                    Universitas Prasetiya Mulya
+                    STEM(Science, Technology, Engineering, Mathemathics)
+                  </h2>
+  
+                  <h2 class="footer-desc mt-4">
+                    BSD City Kavling Edutown I.1
+                    Jl. BSD Raya Utama, BSD City 15339
+                    Kabupaten Tangerang, Indonesia
+                  </h2>
+                </div>
+                <div class="col-lg-6 footer-kanan">
+                    <div class="footer-contacts">
+                        <div class="custom-row my-2">
+                            <img  class="footer-img2" src="{% static 'assets/icons/footer_ig.png'%}" alt="">
+                            <div class="p-1 footer-desc2"><a href="https://www.instagram.com/stemprasetiyamulya/">@stemprasetiyamulya</a></div>
+                        </div>
+                        <div class="custom-row my-2">
+                            <img  class="footer-img2" src="{% static 'assets/icons/footer_wa.png'%}" alt="">
+                            <div class="p-1 footer-desc2"><a href="https://wa.me/6281511662005">(+62)81511662005</a> / <a href="https://wa.me/628124111660">(+62)8124111660</a></div>
+                        </div>
+                        <div class="custom-row my-2">
+                            <img  class="footer-img2" src="{% static 'assets/icons/footer_gmail.png'%}" alt="">
+                            <div class="p-1 footer-desc2"><a href="mailto:info@prasetiyamulya.ac.id">info@prasetiyamulya.ac.id</a></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'js/dashboard.js'%}"></script>
+
+</body>
+</html>
+
+
+

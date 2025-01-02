@@ -1,0 +1,302 @@
+[
+    {
+      "id": 1,
+      "fullName": "Bob Dylan",
+      "semester": 3,
+      "major": "S1 Software Engineering",
+      "positionOne": "IT Consultant",
+      "positionTwo": "Back-End Developer",
+      "cvFile": "bob_dylan_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 2,
+      "fullName": "Emily Chen",
+      "semester": 4,
+      "major": "S1 Renewable Energy Engineering",
+      "positionOne": "Sustainability Specialist",
+      "positionTwo": "Energy Auditor",
+      "cvFile": "emily_chen_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 3,
+      "fullName": "Michael Brown",
+      "semester": 5,
+      "major": "S1 Food Business Technology",
+      "positionOne": "Food Safety Specialist",
+      "positionTwo": "Quality Control Manager",
+      "cvFile": "michael_brown_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 4,
+      "fullName": "Ava Harris",
+      "semester": 6,
+      "major": "S1 Business Mathematics",
+      "positionOne": "Data Analyst",
+      "positionTwo": "Financial Modeler",
+      "cvFile": "ava_harris_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 5,
+      "fullName": "Liam Patel",
+      "semester": 7,
+      "major": "S1 Computer Systems Engineering",
+      "positionOne": "Network Administrator",
+      "positionTwo": "Cybersecurity Specialist",
+      "cvFile": "liam_patel_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 6,
+      "fullName": "Sophia Lee",
+      "semester": 3,
+      "major": "S1 Product Design Engineering",
+      "positionOne": "Product Designer",
+      "positionTwo": "UX/UI Designer",
+      "cvFile": "sophia_lee_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 7,
+      "fullName": "James Darwin",
+      "semester": 4,
+      "major": "S1 Software Engineering",
+      "positionOne": "Front-End Developer",
+      "positionTwo": "Full-Stack Developer",
+      "cvFile": "james_darwin_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 8,
+      "fullName": "Olivia Martin",
+      "semester": 5,
+      "major": "S1 Renewable Energy Engineering",
+      "positionOne": "Renewable Energy Engineer",
+      "positionTwo": "Sustainability Consultant",
+      "cvFile": "olivia_martin_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 9,
+      "fullName": "Ethan Thompson",
+      "semester": 6,
+      "major": "S1 Food Business Technology",
+      "positionOne": "Food Technologist",
+      "positionTwo": "Food Safety Manager",
+      "cvFile": "ethan_thompson_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 10,
+      "fullName": "Isabella Garcia",
+      "semester": 7,
+      "major": "S1 Business Mathematics",
+      "positionOne": "Financial Analyst",
+      "positionTwo": "Risk Management Specialist",
+      "cvFile": "isabella_garcia_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 11,
+      "fullName": "Noah Kim",
+      "semester": 3,
+      "major": "S1 Computer Systems Engineering",
+      "positionOne": "Computer Systems Engineer",
+      "positionTwo": "Network Architect",
+      "cvFile": "noah_kim_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 12,
+      "fullName": "Emily Chen",
+      "semester": 4,
+      "major": "S1 Product Design Engineering",
+      "positionOne": "Product Manager",
+      "positionTwo": "Design Thinking Specialist",
+      "cvFile": "emily_chen_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 13,
+      "fullName": "Alexander Hall",
+      "semester": 5,
+      "major": "S1 Software Engineering",
+      "positionOne": "DevOps Engineer",
+      "positionTwo": "Cloud Computing Specialist",
+      "cvFile": "alexander_hall_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 14,
+      "fullName": "Mia Rodriguez",
+      "semester": 6,
+      "major": "S1 Renewable Energy Engineering",
+      "positionOne": "Energy Efficiency Specialist",
+      "positionTwo": "Sustainable Development Consultant",
+      "cvFile": "mia_rodriguez_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 15,
+      "fullName": "William White",
+      "semester": 7,
+      "major": "S1 Food Business Technology",
+      "positionOne": "Food Scientist",
+      "positionTwo": "Food Quality Manager",
+      "cvFile": "william_white_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 16,
+      "fullName": "Charlotte Davis",
+      "semester": 3,
+      "major": "S1 Business Mathematics",
+      "positionOne": "Business Analyst",
+      "positionTwo": "Financial Modeling Specialist",
+      "cvFile": "charlotte_davis_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 17,
+      "fullName": "Benjamin Lee",
+      "semester": 4,
+      "major": "S1 Computer Systems Engineering",
+      "positionOne": "Computer Systems Administrator",
+      "positionTwo": "Cybersecurity Analyst",
+      "cvFile": "benjamin_lee_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 18,
+      "fullName": "Abigail Martin",
+      "semester": 5,
+      "major": "S1 Product Design Engineering",
+      "positionOne": "Product Designer",
+      "positionTwo": "UX/UI Designer",
+      "cvFile": "abigail_martin_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+      "id": 19,
+      "fullName": "Elijah Patel",
+      "semester": 6,
+      "major": "S1 Software Engineering",
+      "positionOne": "Software Engineer",
+      "positionTwo": "Full-Stack Developer",
+      "cvFile": "elijah_patel_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+      "id": 20,
+      "fullName": "Harper Kim",
+      "semester": 7,
+      "major": "S1 Renewable Energy Engineering",
+      "positionOne": "Renewable Energy Engineer",
+      "positionTwo": "Sustainability Consultant",
+      "cvFile": "harper_kim_cv.pdf",
+      "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+        "id": 21,
+        "fullName": "Aiden Hall",
+        "semester": 3,
+        "major": "S1 Food Business Technology",
+        "positionOne": "Food Technologist",
+        "positionTwo": "Food Safety Manager",
+        "cvFile": "aiden_hall_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+        "id": 22,
+        "fullName": "Lily Chen",
+        "semester": 4,
+        "major": "S1 Business Mathematics",
+        "positionOne": "Financial Analyst",
+        "positionTwo": "Risk Management Specialist",
+        "cvFile": "lily_chen_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+        "id": 23,
+        "fullName": "Logan Lee",
+        "semester": 5,
+        "major": "S1 Computer Systems Engineering",
+        "positionOne": "Computer Systems Engineer",
+        "positionTwo": "Network Architect",
+        "cvFile": "logan_lee_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+        "id": 24,
+        "fullName": "Ava Morales",
+        "semester": 6,
+        "major": "S1 Product Design Engineering",
+        "positionOne": "Product Manager",
+        "positionTwo": "Design Thinking Specialist",
+        "cvFile": "ava_morales_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+        "id": 25,
+        "fullName": "Julian Sanchez",
+        "semester": 7,
+        "major": "S1 Software Engineering",
+        "positionOne": "DevOps Engineer",
+        "positionTwo": "Cloud Computing Specialist",
+        "cvFile": "julian_sanchez_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+        "id": 26,
+        "fullName": "Sofia Rodriguez",
+        "semester": 3,
+        "major": "S1 Renewable Energy Engineering",
+        "positionOne": "Energy Efficiency Specialist",
+        "positionTwo": "Sustainable Development Consultant",
+        "cvFile": "sofia_rodriguez_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+        "id": 27,
+        "fullName": "Gabriel Martin",
+        "semester": 4,
+        "major": "S1 Food Business Technology",
+        "positionOne": "Food Scientist",
+        "positionTwo": "Food Quality Manager",
+        "cvFile": "gabriel_martin_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+        "id": 28,
+        "fullName": "Isabella Garcia",
+        "semester": 5,
+        "major": "S1 Business Mathematics",
+        "positionOne": "Business Analyst",
+        "positionTwo": "Financial Modeling Specialist",
+        "cvFile": "isabella_garcia_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    },
+    {
+        "id": 29,
+        "fullName": "Benjamin Brown",
+        "semester": 6,
+        "major": "S1 Computer Systems Engineering",
+        "positionOne": "Computer Systems Administrator",
+        "positionTwo": "Cybersecurity Analyst",
+        "cvFile": "benjamin_brown_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=male"
+    },
+    {
+        "id": 30,
+        "fullName": "Charlotte Davis",
+        "semester": 7,
+        "major": "S1 Product Design Engineering",
+        "positionOne": "Product Designer",
+        "positionTwo": "UX/UI Designer",
+        "cvFile": "charlotte_davis_cv.pdf",
+        "img": "https://xsgames.co/randomusers/avatar.php?g=female"
+    }
+]

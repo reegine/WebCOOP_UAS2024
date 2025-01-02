@@ -1,0 +1,281 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COOP - Laporan Hasil Magang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/register_input_mahasiswa.css'%}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css'%}">
+    <script src="https://kit.fontawesome.com/3574c5c929.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section class="navigation-bar-top2">
+        <nav class="navbar bg-body-tertiary fixed-top shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="container-fluid">
+               <a class="navbar-brand" href="{% url 'home' %}"><img class="logo-stem" src="{% static 'assets/logo/logo_stem.png'%}" alt=""></a>
+               <div class="d-flex align-items-center">
+                    <img class="rounded-circle profile me-3" alt="avatar1" src="{% static 'assets/people/profile_pic.png'%}" />
+                    <p class="mb-0">John Doe</p>
+                </div>
+            </div>
+          </nav>
+    </section>
+
+    <section class="container logo-back mt-9 mb-5">
+      <h4 class="my-5"><a href="javascript:history.back()"><i class="fa-solid fa-arrow-left me-3"></i> Laporan Hasil Magang</a></h4>
+      <p>
+        Form ini diisi oleh mahasiswa yang sudah terdaftar sebagai siswa yang mengikuti kurikulum COOP. Pengisian form diwajibkan sebanyak dua kali, yaitu ketika tengah semester hingga akhir semester
+      </p>
+    </section>
+
+    <nav class="container nav-data">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Tengah Semester</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Akhir Semester</button>
+        </div>
+    </nav>
+      <div class="container tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            <form action="{% url 'dashboard_student' %}" class="w-100 pt-2 pb-5 rounded">
+                
+                <section class="container keterangan-mahasiswa mt-5">
+                    <h4>AKSES FORM EVALUASI TENGAH - DIGITAL</h4>
+                    <hr class="solid">
+                    <div class="container text-start">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control rounded" id="link-input" readonly>
+                            <button type="button" class="btn btn-custom-red rounded ms-2" id="generate-link-button">Generate Link</button>
+                            <button type="button" class="btn btn-secondary rounded ms-2" id="copy-link-button" style="display: none;">Copy</button>
+                            <div class="form-text mt-2" id="basic-addon4">* Form dapat diakses dari link yang ter-generate sesuai dengan mahasiswa, atau bisa dalam rupa file PDF. Template Form Evaluasi (pdf): <a href="https://bit.ly/sptjmcoop">https://bit.ly/sptjmcoop</a></div>
+                          </div>        
+                     </div>
+                </section>
+
+                <section class="container keterangan-mahasiswa mt-5">
+                    <h4>DATA PERUSAHAAN</h4>
+                    <hr class="solid">
+                    <div class="container text-start">
+                            <div class="row row-cols-md-2 mt-4">
+                                <div class="col-md">
+                                    <div class="mb-3">
+                                        <label for="exampleInputNamaPerusahaan1" class="form-label">Nama Perusahaan/Lembaga/Institusi</label>
+                                        <input value="PT Bank Putra Bangsa" placeholder="contoh: Yayasan Universitas Prasetiya Mulya"  type="text" class="form-control shadow-sm p-3 mb-4 bg-body-tertiary rounded" id="exampleInputNamaPerusahaan1">
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="mb-3">
+                                        <label for="exampleInputNamaPICPerusahaan1" class="form-label">Nama Lengkap Pengisi Form Evaluasi Dari Perusahaan/Lembaga/Institusi</label>
+                                        <input placeholder="contoh: Ibu Rosiana Silalahi"  type="text" class="form-control shadow-sm p-3 bg-body-tertiary rounded" id="exampleInputNamaPICPerusahaan1">
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="mb-3">
+                                        <label for="exampleInputJabatanPIC1" class="form-label">Jabatan PIC</label>
+                                        <input placeholder="contoh: Provinsi, Kota, Kecamatan, Kode POS, petunjuk lainnya"  type="text" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="exampleInputJabatanPIC1">
+                                    </div>
+                                </div>
+                            </div>
+                              </div>
+                </section>
+        
+                <section class="container informasi-pelengkap mt-4">
+                    <h4>INFORMASI PELENGKAP</h4>
+                    <hr class="solid">
+                    <div class="container text-start"> 
+        
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Upload Bukti Form Evaluasi Yang Telah Diisi</label>
+                        <input class="form-control shadow-sm p-3 bg-body-tertiary rounded" type="file" id="formFile">
+                        <div class="form-text mt-2" id="basic-addon4">*Bukti dapat berupa screenshot hasil pengumpulan form digital ataupun foto dokumen pdf. Form dapat diakses dari link yang ter-generate sesuai dengan mahasiswa, atau bisa dalam rupa file PDF. Template Form Evaluasi (pdf): <a href="https://bit.ly/sptjmcoop">https://bit.ly/sptjmcoop</a></div>
+                    </div>
+
+                </section>
+                <section class="container submit mt-6">
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Dengan mengirimkan data ini, form evaluasi saya telah diisi dengan jujur dan tidak adanya tindakan kecurangan</label>
+                      </div>
+                      <button type="button" class="btn btn-outline-danger w-100 btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                        Submit
+                      </button>
+                      <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="staticBackdrop2Label">Konfirmasi Pengumpulan Form Evaluasi Tengah Semester Program COOP</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Apakah kamu yakin data yang dimasukkan sudah benar?
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+                              <button type="submit" class="btn btn-custom-red" >Kirimkan</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </section>
+            </form>
+        </div>
+
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <form action="{% url 'dashboard_student' %}" class="w-100 pt-2 pb-5 rounded">
+                
+                <section class="container keterangan-mahasiswa mt-5">
+                    <h4>AKSES FORM EVALUASI AKHIR - DIGITAL</h4>
+                    <hr class="solid">
+                    <div class="container text-start">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control rounded" id="link-input2" readonly>
+                            <button type="button" class="btn btn-custom-red rounded ms-2" id="generate-link-button2">Generate Link</button>
+                            <button type="button" class="btn btn-secondary rounded ms-2" id="copy-link-button2" style="display: none;">Copy</button>
+                            <div class="form-text mt-2" id="basic-addon4">* Form dapat diakses dari link yang ter-generate sesuai dengan mahasiswa, atau bisa dalam rupa file PDF. Template Form Evaluasi (pdf): <a href="https://bit.ly/sptjmcoop">https://bit.ly/sptjmcoop</a></div>
+                          </div>        
+                     </div>
+                </section>
+
+                <section class="container keterangan-mahasiswa mt-5">
+                    <h4>DATA PERUSAHAAN</h4>
+                    <hr class="solid">
+                    <div class="container text-start">
+                            <div class="row row-cols-md-2 mt-4">
+                                <div class="col-md">
+                                    <div class="mb-3">
+                                        <label for="exampleInputStatusPemagangan1" class="form-label">Program</label>
+                                        <select class="form-select shadow-sm p-3 mb-5 bg-body-tertiary rounded" aria-label="Default select example">
+                                            <option selected>pilih status program</option>
+                                            <option value="Sudah Diterima">MAGANG</option>
+                                            <option value="Masih Proses Melamar">STUDI INDEPENDEN</option>
+                                            <option value="Masih Proses Melamar">IISMA</option>
+                                            <option value="Masih Proses Melamar">Google Bangkit</option>
+                                            <option value="Masih Proses Melamar">PMMB - BUMN</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="mb-3">
+                                        <label for="exampleInputNamaPerusahaan1" class="form-label">Nama Perusahaan/Lembaga/Institusi</label>
+                                        <input value="PT Bank Putra Bangsa" placeholder="contoh: Yayasan Universitas Prasetiya Mulya"  type="text" class="form-control shadow-sm p-3 mb-4 bg-body-tertiary rounded" id="exampleInputNamaPerusahaan1">
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="mb-3">
+                                        <label for="exampleInputNamaPICPerusahaan1" class="form-label">Nama Lengkap Pengisi Form Evaluasi Dari Perusahaan/Lembaga/Institusi</label>
+                                        <input placeholder="contoh: Ibu Rosiana Silalahi"  type="text" class="form-control shadow-sm p-3 bg-body-tertiary rounded" id="exampleInputNamaPICPerusahaan1">
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="mb-3">
+                                        <label for="exampleInputJabatanPIC1" class="form-label">Jabatan PIC</label>
+                                        <input placeholder="contoh: Provinsi, Kota, Kecamatan, Kode POS, petunjuk lainnya"  type="text" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="exampleInputJabatanPIC1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="mb-3">
+                                    <label for="exampleInputNamaPerusahaan1" class="form-label">Tanggal Pengumpulan Laporan Akhir ke Perusahaan</label>
+                                    <input  placeholder="contoh: Senin, 25 Oktober 2024"  type="date" class="form-control shadow-sm p-3 mb-4 bg-body-tertiary rounded" id="exampleInputNamaPerusahaan1">
+                                </div>
+                            </div>
+                              </div>
+                </section>
+
+                <section class="container informasi-pelengkap mt-4">
+                    <h4>INFORMASI PELENGKAP</h4>
+                    <hr class="solid">
+                    <div class="container text-start">
+        
+                    <div class="row row-cols-md-2 my-3">
+                        <div class="col-md">
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Upload Bukti Form Evaluasi Yang Telah Diisi</label>
+                                <input class="form-control shadow-sm p-3 bg-body-tertiary rounded" type="file" id="formFile">
+                                <div class="form-text mt-2" id="basic-addon4">*Bukti dapat berupa screenshot hasil pengumpulan form digital ataupun foto dokumen pdf. Form dapat diakses dari link yang ter-generate sesuai dengan mahasiswa, atau bisa dalam rupa file PDF. Template Form Evaluasi (pdf): <a href="https://bit.ly/sptjmcoop">https://bit.ly/sptjmcoop</a></div>
+                            </div>        
+                        </div>
+                        <div class="col-md">
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Upload Student Reflection Yang Telah Diisi</label>
+                                <input class="form-control shadow-sm p-3 bg-body-tertiary rounded" type="file" id="formFile">
+                                <div class="form-text mt-2" id="basic-addon4">*Template Form Evaluasi (pdf): <a href="https://bit.ly/sptjmcoop">https://bit.ly/sptjmcoop</a></div>
+                            </div>        
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container submit mt-6">
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Dengan mengirimkan data ini, form evaluasi saya telah diisi dengan jujur dan tidak adanya tindakan kecurangan</label>
+                      </div>
+                      <button type="button" class="btn btn-outline-danger w-100 btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Submit
+                      </button>
+                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="staticBackdropLabel">Konfirmasi Pengumpulan Form Evaluasi Akhir Semester Program COOP</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Apakah kamu yakin data yang dimasukkan sudah benar?
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+                              <button type="submit" class="btn btn-custom-red" >Kirimkan</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </section>
+            </form>
+        </div>
+      </div>
+
+    
+
+    <footer class="mt-6 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                  <img  class="footer-img" src="{% static 'assets/logo/logo_stem2.png'%}" alt="">
+                  <h2 class="footer-desc mt-5">
+                    Universitas Prasetiya Mulya
+                    STEM(Science, Technology, Engineering, Mathemathics)
+                  </h2>
+  
+                  <h2 class="footer-desc mt-4">
+                    BSD City Kavling Edutown I.1
+                    Jl. BSD Raya Utama, BSD City 15339
+                    Kabupaten Tangerang, Indonesia
+                  </h2>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer-contacts">
+                        <div class="custom-row my-2">
+                            <img  class="footer-img2" src="{% static 'assets/icons/footer_ig.png'%}" alt="">
+                            <div class="p-1 footer-desc2"><a href="https://www.instagram.com/stemprasetiyamulya/">@stemprasetiyamulya</a></div>
+                        </div>
+                        <div class="custom-row my-2">
+                            <img  class="footer-img2" src="{% static 'assets/icons/footer_wa.png'%}" alt="">
+                            <div class="p-1 footer-desc2"><a href="https://wa.me/6281511662005">(+62)81511662005</a> / <a href="https://wa.me/628124111660">(+62)8124111660</a></div>
+                        </div>
+                        <div class="custom-row my-2">
+                            <img  class="footer-img2" src="{% static 'assets/icons/footer_gmail.png'%}" alt="">
+                            <div class="p-1 footer-desc2"><a href="mailto:info@prasetiyamulya.ac.id">info@prasetiyamulya.ac.id</a></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'js/dashboard.js'%}"></script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COOP - Dashboard Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/register_input_mahasiswa.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">    
+    <script src="https://kit.fontawesome.com/3574c5c929.js" crossorigin="anonymous"></script>
+    <style>
+         .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .profile-upload {
+            max-width: 200px;
+            margin-bottom: 30px;
+        }
+        .main-content {
+            margin-top: 100px;
+        }
+        .buttons {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px; /* Space between icon and text */
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #333; /* Dark gray text color */
+            text-decoration: none;
+            background-color: #fff; /* White background */
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: all 0.3s ease;
+        }
+        .buttons svg {
+            width: 16px;
+            height: 16px;
+            fill: #333; /* Matches text color */
+        }
+
+        .buttons:hover {
+            background-color: #f8f9fa; /* Slightly darker background on hover */
+            border-color: #bbb; /* Darker border on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+            color: #000; /* Darker text on hover */
+        }
+
+        .buttons:active {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
+            transform: translateY(2px); /* Slight downward shift */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <section class="navigation-bar-top2">
+        <nav class="navbar bg-body-tertiary fixed-top shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="container-fluid">
+               <a class="navbar-brand" href="{% url 'dashboard_admin' %}">
+                   <img class="logo-stem" src="{% static 'assets/logo/logo_stem.png' %}" alt="">
+               </a>
+               <a href="{% url 'dashboard_admin' %}" class="d-flex align-items-center">
+                    <img class="rounded-circle profile me-3" alt="avatar1" src="{% static 'assets/people/profile_pic.png' %}" />
+                    <p class="mb-0">Sarah Lim</p>
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarTogglerDemo02" aria-labelledby="navbarTogglerDemo02Label">
+                   <div class="offcanvas-header">
+                       <h5 class="offcanvas-title" id="navbarTogglerDemo02Label">Menu</h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                   </div>
+                   <div class="offcanvas-body">
+                       <ul class="navbar-nav justify-content-end flex-grow-1">
+                           <li class="nav-item">
+                               <button class="nav-link text-start p-4 rounded" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                   <i class="fa-solid fa-house me-3"></i>Dashboard
+                               </button>
+                           </li>
+                           <li class="nav-item">
+                               <button class="nav-link text-start p-4 rounded" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                                   <i class="fa-solid fa-bell me-3"></i>Notifikasi
+                               </button>
+                           </li>
+                           <li class="nav-item">
+                               <button class="nav-link text-start p-4 rounded" id="v-pills-tasks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                                   <i class="fa-solid fa-calendar-check me-3"></i>Daftar Tugas
+                               </button>
+                           </li>
+                           <li class="nav-item">
+                               <button class="nav-link text-start p-4 rounded active" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                                   <i class="fa-solid fa-user me-3"></i>Profil Admin
+                               </button>
+                           </li>
+                           <li class="nav-item">
+                               <a href="{% url 'home' %}" type="button" class="btn btn-light">
+                                   <i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Keluar Akun
+                               </a>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Main Content -->
+    <section class="container identitas-mahasiswa main-content">
+
+        <section class="container logo-back mt-9 mb-5">
+            <h4 class="my-5"><a href="javascript:history.back()"><i class="fa-solid fa-arrow-left me-3"></i> Detail Konfirmasi COOP</a></h4>
+        </section>
+    
+        <section class="container identitas-mahasiswa main-content">
+    
+            <h4>DETAIL KONFIRMASI COOP</h4>
+            <hr class="solid">
+
+        </section>
+
+        <div class="container text-start">
+            <div class="row row-cols-md-2">
+                <!-- NIM -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="nim" class="form-label">NIM</label>
+                        <input type="text" value="{{ nim }}" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="nim" readonly>
+                    </div>
+                </div>
+                <!-- Supervisor -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="supervisor" class="form-label">Supervisor</label>
+                        <input type="text" value="{{ supervisor }}" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="supervisor" readonly>
+                    </div>
+                </div>
+                <!-- Intern Type -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="intern_type" class="form-label">Intern Type</label>
+                        <input type="text" value="{{ intern_type }}" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="intern_type" readonly>
+                    </div>
+                </div>
+                <!-- Semester -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="semester" class="form-label">Semester</label>
+                        <input type="text" value="{{ semester }}" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="semester" readonly>
+                    </div>
+                </div>
+                <!-- Mentor Name -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="mentor_name" class="form-label">Mentor Name</label>
+                        <input type="text" value="{{ mentor_name }}" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="mentor_name" readonly>
+                    </div>
+                </div>
+                <!-- Company Name -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="company_name" class="form-label">Company Name</label>
+                        <input type="text" value="{{ company_name }}" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="company_name" readonly>
+                    </div>
+                </div>
+                <!-- PIC Name -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="pic_name" class="form-label">PIC Name</label>
+                        <input type="text" value="{{ pic_name }}" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="pic_name" readonly>
+                    </div>
+                </div>
+                <!-- Company Address -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="company_address" class="form-label">Company Address</label>
+                        <textarea value="{{ company_address }}" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="company_address" readonly>{{ company_address }}</textarea>
+                    </div>
+                </div>
+                <!-- PIC Position -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="pic_position" class="form-label">PIC Position</label>
+                        <input type="text" value="{{ pic_position }}" class="form-control shadow-sm p-3 mb-5 bg-body-tertiary rounded" id="pic_position" readonly>
+                    </div>
+                </div>
+                <!-- File Report -->
+            <section>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="file_report" class="form-label">File Report</label>
+                        <a href="{{ file_report }}" class="buttons" target="_blank">
+                            <i class="fa-solid fa-download"></i> Lihat File Report
+                        </a>
+                    </div>
+                </div>
+                <!-- File Proof Confirmation -->
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label for="file_proof_confirm" class="form-label">File Proof Confirmation</label>
+                        <a href="{{ file_proof_confirm }}" class="buttons" target="_blank">
+                            <i class="fa-solid fa-download"></i> Lihat File Proof
+                        </a>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </div>
+        
+                <!-- Buttons Approve dan Reject -->
+                <div class="d-grid gap-2 col-md-12 text-center mt-4">
+                    <button class="btn btn-outline-success " id="approve-button">Approve</button>
+                    <button class="btn btn-outline-danger" id="reject-button">Reject</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-6 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <img class="footer-img" src="{% static 'assets/logo/logo_stem2.png' %}" alt="">
+                    <h2 class="footer-desc mt-5">
+                        Universitas Prasetiya Mulya
+                        STEM(Science, Technology, Engineering, Mathematics)
+                    </h2>
+                    <h2 class="footer-desc mt-4">
+                        BSD City Kavling Edutown I.1<br>
+                        Jl. BSD Raya Utama, BSD City 15339<br>
+                        Kabupaten Tangerang, Indonesia
+                    </h2>
+                </div>
+                <div class="col-lg-6 footer-kanan">
+                    <div class="footer-contacts">
+                        <div class="custom-row my-2">
+                            <img class="footer-img2" src="{% static 'assets/icons/footer_ig.png' %}" alt="">
+                            <div class="p-1 footer-desc2"><a href="https://www.instagram.com/stemprasetiyamulya/">@stemprasetiyamulya</a></div>
+                        </div>
+                        <div class="custom-row my-2">
+                            <img class="footer-img2" src="{% static 'assets/icons/footer_wa.png' %}" alt="">
+                            <div class="p-1 footer-desc2"><a href="https://wa.me/6281511662005">(+62)81511662005</a> / <a href="https://wa.me/628124111660">(+62)8124111660</a></div>
+                        </div>
+                        <div class="custom-row my-2">
+                            <img class="footer-img2" src="{% static 'assets/icons/footer_gmail.png' %}" alt="">
+                            <div class="p-1 footer-desc2"><a href="mailto:info@prasetiyamulya.ac.id">info@prasetiyamulya.ac.id</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

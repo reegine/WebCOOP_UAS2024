@@ -1,0 +1,120 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.img-regis-mahasiswa img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-stem {
+    width: 15rem;
+}
+
+.mt-6{
+    margin-top: 4rem;
+}
+
+.logo-back a{
+    color: #E20613;
+    text-decoration: none;
+}
+
+hr.solid {
+    border-top: 3px solid #181818;
+}
+
+.identitas-mahasiswa h4,
+.keterangan-mahasiswa h4,
+.informasi-pelengkap h4,
+.custom-font-red{
+    color: #E20613;
+}
+
+/* FOOTER */
+footer{
+    background-color: #181818;
+    width: 100%;
+}
+
+.footer-img{
+    width: 20rem;
+}
+
+.footer-desc{
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-img2{
+    height: 2rem;
+}
+
+.footer-desc2{
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-desc2 a{
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.custom-row{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-contacts{
+    position: relative;
+    bottom: -4rem;
+    right: -20rem;
+}
+
+@media only screen and (max-width: 1600px) {
+    .footer-contacts{
+        position: none;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-top: 2rem;
+    }
+}
+
+.mt-6{
+    margin-top: 8rem;
+}
+
+.btn-custom-red{
+    color: white;
+    background-color: #E20613;
+}
+
+.text-custom-red li a{
+    color: #747474;
+}
+.text-custom-red li a:hover{
+    color: #E20613;
+}
+
+#nav-tabContent{
+    background-color: white;
+}
+
+#nav-tab .nav-link.active{
+    color: #E20613;
+}
+
+#nav-tab .nav-link{
+    color: #747474;
+}

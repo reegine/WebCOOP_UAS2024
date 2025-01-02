@@ -1,0 +1,130 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; 
+    overflow: hidden;
+}
+
+.login-img {
+    width: 50vw; 
+    height: 100vh; 
+    object-fit: cover; 
+}
+
+.logo-stem {
+    width: 20rem;
+}
+
+.btn-custom-red {
+    background-color: #B21D1D;
+    color: white;
+}
+
+.new-account {
+    display: flex;
+}
+
+.new-account p {
+    color: #B21D1D;
+}
+
+.new-account a {
+    color: #979797;
+    text-decoration: none;
+}
+
+.vh-100 {
+    height: 100vh;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.ps-6{
+    padding-left: 10rem;
+}
+
+.py-6{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.options-regis-block {
+    display: block; 
+}
+
+.option-regis-block button {
+    width: 80%; 
+    margin-bottom: 1rem; 
+}
+
+@media only screen and (max-width: 1267px) {
+    .ps-6{
+        padding-left: 8rem;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+    html, body {
+        overflow:scroll;
+    }
+
+    .login-img{
+        display: none;
+    }
+
+    .logo-stem {
+        width: 10rem;
+    }
+
+    .otw-absolute{
+        position: absolute;
+        top: 5rem;
+        justify-content: center;
+    }
+    .ps-6{
+        padding-left: 3rem;
+    }
+
+    body{
+        background-image: url(../assets/bg/bg-login.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-attachment:local;
+        position:absolute;
+        background-color: rgba(255,255,255,0.7);
+        background-blend-mode:overlay;
+    }
+    .new-account a{
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+
+
+}
